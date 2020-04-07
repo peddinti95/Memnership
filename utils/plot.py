@@ -72,12 +72,12 @@ def drawPlot(accuracy_per_class,precision_per_class,recall_per_class,plot_title,
     plot_path=path+"/fig_"+plot_title+".png"
     plt.savefig(plot_path)
 
-def plotterFunction(plot_title, path):
+def plotterFunction(plot_title,path):
     """my code starts to draw plot graph"""
     data = pd.DataFrame()
-    f1 = np.load(path + '/res_accuracy_per_class.npy') * 100
-    f2 = np.load(path + '/res_precision_per_class.npy') * 100
-    f3 = np.load(path + '/res_recall_per_class.npy') * 100
+    f1 = np.load(path + '/res_accuracy_per_class.csv') * 100
+    f2 = np.load(path + '/res_precision_per_class.csv') * 100
+    f3 = np.load(path + '/res_recall_per_class.csv') * 100
     data['Classlabel'] = [i + 1 for i in range(len(f1.tolist()[0]))]
     data['Accuracy'] = f1.tolist()[0]
     data['Precision'] = f2.tolist()[0]
