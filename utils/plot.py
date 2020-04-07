@@ -1,6 +1,7 @@
 import numpy as np
 import matplotlib.pyplot as plt
 import itertools
+import seaborn as sns
 
 def plot_confusion_matrix(cm, classes, normalize=False, title='Confusion matrix', cmap=plt.cm.Blues):
     """
@@ -36,17 +37,17 @@ def plot_confusion_matrix(cm, classes, normalize=False, title='Confusion matrix'
 def drawLossAcc(plot_result,plot_title,path):
     """accuracy and loss train/value graph"""
     plt.figure()
-    plt.subplot(2,2,1)
-    plt.cla()
-    plt.plot(plot_result[0], color='#1a53ff')
-    plt.ylabel('loss train')
-    plt.subplot(2,2,2)
-    plt.plot(plot_result[1], color='#1a53ff')
-    plt.ylabel('accuracy train')
-    plt.subplot(2,2,3)
-    plt.plot(plot_result[2], color='#1a53ff')
-    plt.ylabel('loss val')
-    plt.xlabel('Epoch')
+    #plt.subplot(2,2,1)
+    #plt.cla()
+    #plt.plot(plot_result[0], color='#1a53ff')
+    #plt.ylabel('loss train')
+    #plt.subplot(2,2,2)
+    #plt.plot(plot_result[1], color='#1a53ff')
+    #plt.ylabel('accuracy train')
+    #plt.subplot(2,2,3)
+    #plt.plot(plot_result[2], color='#1a53ff')
+    #plt.ylabel('loss val')
+    #plt.xlabel('Epoch')
     plt.subplot(2, 2, 4)
     plt.plot(plot_result[3], color='#1a53ff')
     plt.ylabel('accuracy val')
@@ -59,25 +60,25 @@ def drawPlot(accuracy_per_class,precision_per_class,recall_per_class,plot_title,
     """my code starts to draw plot graph"""
     plt.figure()
     plt.subplot(3, 1, 1)
-    plt.plot(accuracy_per_class, color='#1a53ff', lw=2, marker='o')
+    plt.hist(accuracy_per_class,bins=10,color='#1a53ff')
     plt.title("Results on "+plot_title)
     plt.ylabel('Accuracy')
     plt.subplot(3, 1, 2)
-    plt.plot(recall_per_class, color='#1a53ff', lw=2, marker='o')
+    plt.hist(recall_per_class,bins=10,color='#1a53ff')
     plt.ylabel('Recall')
     plt.subplot(3, 1, 3)
-    plt.plot(precision_per_class, color='#1a53ff', lw=2, marker='o')
+    plt.hist(precision_per_class,bins=10,color='#1a53ff')
     plt.ylabel('Precision')
     plt.tight_layout()
     plot_path=path+"/fig_"+plot_title+".png"
     plt.savefig(plot_path)
 
-def plotterFunction(plot_title,path):
+def plotterFunction(plot_title, path):
     """my code starts to draw plot graph"""
     data = pd.DataFrame()
-    f1 = np.load(path + '/res_accuracy_per_class.csv') * 100
-    f2 = np.load(path + '/res_precision_per_class.csv') * 100
-    f3 = np.load(path + '/res_recall_per_class.csv') * 100
+    f1 = np.load(path + '/res_accuracy_per_class.npy') * 100
+    f2 = np.load(path + '/res_precision_per_class.npy') * 100
+    f3 = np.load(path + '/res_recall_per_class.npy') * 100
     data['Classlabel'] = [i + 1 for i in range(len(f1.tolist()[0]))]
     data['Accuracy'] = f1.tolist()[0]
     data['Precision'] = f2.tolist()[0]
