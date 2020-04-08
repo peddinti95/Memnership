@@ -59,7 +59,7 @@ if config.statistics.dataset == "KMNIST":
             np.savetxt(path + "/res_precision_per_class.csv", res_precision_per_class)
             np.savetxt(path + "/res_accuracy_per_class.csv", res_accuracy_per_class)
             #np.savetxt(path + "/res_best_acc_shadows.csv", res_best_acc_shadows)
-	    plotterFunction(plot_title, path)
+	    #plotterFunction(plot_title, path)
 
     if config.statistics.type == "number_shadow":
         print("START STATS ON NUMBER SHADOW  WITH KMNIST : ", config.statistics.number_shadow_value)
@@ -95,7 +95,7 @@ if config.statistics.dataset == "KMNIST":
             np.savetxt(path + "/res_precision_per_class.csv", res_precision_per_class)
             np.savetxt(path + "/res_accuracy_per_class.csv", res_accuracy_per_class)
             #np.savetxt(path + "/res_best_acc_shadows.csv", res_best_acc_shadows)
-	    plotterFunction(plot_title, path)
+	    #plotterFunction(plot_title, path)
 
     if config.statistics.type == "overfitting":
         print("START STATS ON OVERFITTING WITH KMNIST : ", config.statistics.epoch_value)
@@ -131,7 +131,7 @@ if config.statistics.dataset == "KMNIST":
             np.savetxt(path + "/res_precision_per_class.csv", res_precision_per_class)
             np.savetxt(path + "/res_accuracy_per_class.csv", res_accuracy_per_class)
             #np.savetxt(path + "/res_best_acc_shadows.csv", res_best_acc_shadows)
-	    plotterFunction(plot_title, path)
+	    #plotterFunction(plot_title, path)
 
 if config.statistics.dataset == "MNIST":
     if config.statistics.type == "training_size":
@@ -168,7 +168,7 @@ if config.statistics.dataset == "MNIST":
             np.savetxt(path + "/res_precision_per_class.csv", res_precision_per_class)
             np.savetxt(path + "/res_accuracy_per_class.csv", res_accuracy_per_class)
             #np.savetxt(path + "/res_best_acc_shadows.csv", res_best_acc_shadows)
-            plotterFunction(plot_title, path)
+            #plotterFunction(plot_title, path)
 
     if config.statistics.type == "number_shadow":
         print("START STATS ON NUMBER SHADOW  WITH MNIST : ", config.statistics.number_shadow_value)
@@ -204,7 +204,7 @@ if config.statistics.dataset == "MNIST":
             np.savetxt(path + "/res_precision_per_class.csv", res_precision_per_class)
             np.savetxt(path + "/res_accuracy_per_class.csv", res_accuracy_per_class)
             #np.savetxt(path + "/res_best_acc_shadows.csv", res_best_acc_shadows)
-            plotterFunction(plot_title, path)
+            #plotterFunction(plot_title, path)
 
     if config.statistics.type == "overfitting":
         print("START STATS ON OVERFITTING WITH MNIST : ", config.statistics.epoch_value)
@@ -240,7 +240,7 @@ if config.statistics.dataset == "MNIST":
             np.savetxt(path + "/res_precision_per_class.csv", res_precision_per_class)
             np.savetxt(path + "/res_accuracy_per_class.csv", res_accuracy_per_class)
             #np.savetxt(path + "/res_best_acc_shadows.csv", res_best_acc_shadows)
-	    plotterFunction(plot_title, path)
+	    #plotterFunction(plot_title, path)
 
 if config.statistics.dataset == "FashionMNIST":
     if config.statistics.type == "training_size":
@@ -277,7 +277,7 @@ if config.statistics.dataset == "FashionMNIST":
             np.savetxt(path + "/res_precision_per_class.csv", res_precision_per_class)
             np.savetxt(path + "/res_accuracy_per_class.csv", res_accuracy_per_class)
             #np.savetxt(path + "/res_best_acc_shadows.csv", res_best_acc_shadows)
-            plotterFunction(plot_title, path)
+            #plotterFunction(plot_title, path)
 
     if config.statistics.type == "number_shadow":
         print("START STATS ON NUMBER SHADOW  WITH FashionMNIST : ", config.statistics.number_shadow_value)
@@ -313,7 +313,7 @@ if config.statistics.dataset == "FashionMNIST":
             np.savetxt(path + "/res_precision_per_class.csv", res_precision_per_class)
             np.savetxt(path + "/res_accuracy_per_class.csv", res_accuracy_per_class)
             #np.savetxt(path + "/res_best_acc_shadows.csv", res_best_acc_shadows)
-	    plotterFunction(plot_title, path)
+	    #plotterFunction(plot_title, path)
 
     if config.statistics.type == "overfitting":
         print("START STATS ON OVERFITTING WITH FashionMNIST : ", config.statistics.epoch_value)
@@ -349,7 +349,7 @@ if config.statistics.dataset == "FashionMNIST":
             np.savetxt(path + "/res_precision_per_class.csv", res_precision_per_class)
             np.savetxt(path + "/res_accuracy_per_class.csv", res_accuracy_per_class)
             #np.savetxt(path + "/res_best_acc_shadows.csv", res_best_acc_shadows)
-	    plotterFunction(plot_title, path)
+	    #plotterFunction(plot_title, path)
 
 if config.statistics.dataset == "CIFAR10":
     if config.statistics.type == "training_size":
@@ -386,7 +386,7 @@ if config.statistics.dataset == "CIFAR10":
             np.savetxt(path + "/res_precision_per_class.csv", res_precision_per_class)
             np.savetxt(path + "/res_accuracy_per_class.csv", res_accuracy_per_class)
             #np.savetxt(path + "/res_best_acc_shadows.csv", res_best_acc_shadows)
-            plotterFunction(plot_title, path)
+            #plotterFunction(plot_title, path)
 
     if config.statistics.type == "number_shadow":
         print("START STATS ON NUMBER SHADOW  WITH CIFAR10 : ", config.statistics.number_shadow_value)
@@ -419,7 +419,7 @@ if config.statistics.dataset == "CIFAR10":
             np.savetxt(path + "/res_precision_per_class.csv", res_precision_per_class)
             np.savetxt(path + "/res_accuracy_per_class.csv", res_accuracy_per_class)
             #np.savetxt(path + "/res_best_acc_shadows.csv", res_best_acc_shadows)
-            plotterFunction(plot_title, path)
+            #plotterFunction(plot_title, path)
 
     if config.statistics.type == "overfitting":
         print("START STATS ON OVERFITTING WITH CIFAR10 : ", config.statistics.epoch_value)
@@ -452,7 +452,7 @@ if config.statistics.dataset == "CIFAR10":
             np.savetxt(path + "/res_precision_per_class.csv", res_precision_per_class)
             np.savetxt(path + "/res_accuracy_per_class.csv", res_accuracy_per_class)
             #np.savetxt(path + "/res_best_acc_shadows.csv", res_best_acc_shadows)
-            plotterFunction(plot_title, path)
+            #plotterFunction(plot_title, path)
 
 if config.statistics.dataset == "STL10":
     if config.statistics.type == "training_size":
@@ -486,7 +486,7 @@ if config.statistics.dataset == "STL10":
             np.savetxt(path + "/res_precision_per_class.csv", res_precision_per_class)
             np.savetxt(path + "/res_accuracy_per_class.csv", res_accuracy_per_class)
             #np.savetxt(path + "/res_best_acc_shadows.csv", res_best_acc_shadows)
-            plotterFunction(plot_title, path)
+            #plotterFunction(plot_title, path)
 
     if config.statistics.type == "number_shadow":
         print("START STATS ON NUMBER SHADOW  WITH STL10 : ", config.statistics.number_shadow_value)
@@ -519,7 +519,7 @@ if config.statistics.dataset == "STL10":
             np.savetxt(path + "/res_precision_per_class.csv", res_precision_per_class)
             np.savetxt(path + "/res_accuracy_per_class.csv", res_accuracy_per_class)
             #np.savetxt(path + "/res_best_acc_shadows.csv", res_best_acc_shadows)
-            plotterFunction(plot_title, path)
+            #plotterFunction(plot_title, path)
 
     if config.statistics.type == "overfitting":
         print("START STATS ON OVERFITTING WITH STL10 : ", config.statistics.epoch_value)
@@ -552,7 +552,7 @@ if config.statistics.dataset == "STL10":
             np.savetxt(path + "/res_precision_per_class.csv", res_precision_per_class)
             np.savetxt(path + "/res_accuracy_per_class.csv", res_accuracy_per_class)
             #np.savetxt(path + "/res_best_acc_shadows.csv", res_best_acc_shadows)
-            plotterFunction(plot_title, path)
+            #plotterFunction(plot_title, path)
 
 if config.statistics.dataset == "CIFAR100":
     if config.statistics.type == "training_size":
@@ -586,7 +586,7 @@ if config.statistics.dataset == "CIFAR100":
             np.savetxt(path + "/res_precision_per_class.csv", res_precision_per_class)
             np.savetxt(path + "/res_accuracy_per_class.csv", res_accuracy_per_class)
             #np.savetxt(path + "/res_best_acc_shadows.csv", res_best_acc_shadows)
-            plotterFunction(plot_title, path)
+            #plotterFunction(plot_title, path)
 
     if config.statistics.type == "number_shadow":
         print("START STATS ON NUMBER SHADOW  WITH CIFAR100 : ", config.statistics.number_shadow_value)
@@ -619,7 +619,7 @@ if config.statistics.dataset == "CIFAR100":
             np.savetxt(path + "/res_precision_per_class.csv", res_precision_per_class)
             np.savetxt(path + "/res_accuracy_per_class.csv", res_accuracy_per_class)
             #np.savetxt(path + "/res_best_acc_shadows.csv", res_best_acc_shadows)
-            plotterFunction(plot_title, path)
+            #plotterFunction(plot_title, path)
 
     if config.statistics.type == "overfitting":
         print("START STATS ON OVERFITTING WITH CIFAR100 : ", config.statistics.epoch_value)
@@ -652,4 +652,4 @@ if config.statistics.dataset == "CIFAR100":
             np.savetxt(path + "/res_precision_per_class.csv", res_precision_per_class)
             np.savetxt(path + "/res_accuracy_per_class.csv", res_accuracy_per_class)
             #np.savetxt(path + "/res_best_acc_shadows.csv", res_best_acc_shadows)
-            plotterFunction(plot_title, path)
+            #plotterFunction(plot_title, path)
